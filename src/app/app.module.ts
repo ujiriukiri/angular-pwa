@@ -12,18 +12,19 @@ import { MatCardModule, MatButtonModule, MatIconModule, MatSnackBarModule,
           MatProgressSpinnerModule, MatChipsModule, MatBadgeModule, MatListModule,
           MatExpansionModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule,
           MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
-  MatSlideToggleModule, MatToolbarModule, MatSidenavModule } from '@angular/material';
+  MatSlideToggleModule, MatToolbarModule, MatSidenavModule, MatGridListModule, MatMenuModule } from '@angular/material';
 
 import 'hammerjs';
 import { MainNavComponent } from './component/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { TestDashboardComponent } from './test-dashboard/test-dashboard.component';
 
 const routes: Routes = [
   {path: '', component: AppComponent}
 ];
 
 @NgModule({
-  declarations: [AppComponent, TopnavComponent, SidebarComponent, MainNavComponent],
+  declarations: [AppComponent, TopnavComponent, SidebarComponent, MainNavComponent, TestDashboardComponent],
   imports: [
     RouterModule.forRoot(routes),
     BrowserModule,
@@ -46,7 +47,7 @@ const routes: Routes = [
     MatInputModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatCheckboxModule, MatSidenavModule, LayoutModule
+    MatCheckboxModule, MatSidenavModule, LayoutModule, MatGridListModule, MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
