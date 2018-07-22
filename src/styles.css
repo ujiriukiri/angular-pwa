@@ -6,6 +6,7 @@ purple-green.css */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 html, body{
+  /* min-height: 100%; */
   height: 100%;
 }
 
@@ -32,4 +33,10 @@ body{
 
 .mat-icon-button.cdk-program-focused  .mat-button-focus-overlay{
   opacity: 0 !important;
+}
+
+@media (min-width: 700px){
+  .mat-sidenav-content{
+    padding-top: 64px;
+  }
 }

@@ -17,10 +17,11 @@ import { MatCardModule, MatButtonModule, MatIconModule, MatSnackBarModule,
 import 'hammerjs';
 import { MainNavComponent } from './component/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { TestDashboardComponent } from './test-dashboard/test-dashboard.component';
+import { TestDashboardComponent } from './component/test-dashboard/test-dashboard.component';
 
 const routes: Routes = [
-  {path: '', component: AppComponent}
+  { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
+  { path: 'dashboard', component: TestDashboardComponent }
 ];
 
 @NgModule({
