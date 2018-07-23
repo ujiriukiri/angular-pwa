@@ -24,6 +24,7 @@ body{
 
 .mat-sidenav-content{
   padding-top: 56px;
+  height: calc(100% - 56px);
 }
 
 #topnav{
@@ -47,5 +48,6 @@ body{
 @media (min-width: 700px){
   .mat-sidenav-content{
     padding-top: 64px;
+    height: calc(100% - 64px) !important;
   }
 }

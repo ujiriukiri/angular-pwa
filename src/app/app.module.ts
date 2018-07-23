@@ -18,9 +18,10 @@ import 'hammerjs';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, routingComponents],
+  declarations: [AppComponent, routingComponents, DashboardComponent],
   imports: [
     // RouterModule.forRoot(routes),
     AppRoutingModule,

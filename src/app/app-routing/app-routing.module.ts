@@ -5,11 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainNavComponent } from '../component/main-nav/main-nav.component';
 import { TopnavComponent } from '../component/topnav/topnav.component';
 import { SidebarComponent } from '../component/sidebar/sidebar.component';
-import { TestDashboardComponent } from '../component/test-dashboard/test-dashboard.component';
+import { DashboardComponent } from '../component/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-  { path: 'dashboard', component: TestDashboardComponent }
+  { path: 'dashboard', component: DashboardComponent }
 ];
 
 @NgModule({
@@ -22,4 +22,4 @@ const routes: Routes = [
 export class AppRoutingModule { }
 export const routingComponents = [
   // AppComponent,
-  MainNavComponent, TopnavComponent, SidebarComponent, TestDashboardComponent];
+  MainNavComponent, TopnavComponent, SidebarComponent, DashboardComponent];
