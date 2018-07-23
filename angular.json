@@ -21,8 +21,8 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
-              "src/mainfest.json",
-              "src/manifest.json"
+              "src/icons",
+              "src/mainfest.json"
             ],
             "styles": [
               "src/styles.css"
