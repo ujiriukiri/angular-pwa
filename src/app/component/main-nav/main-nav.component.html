@@ -18,22 +18,31 @@
       </button>
     </mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+      <a mat-list-item routerLink="#">Start Shift <span class="time-spent flex-shrink-1">04:23:53</span></a>
+      <a mat-list-item routerLink="list">Orders</a>
+      <a mat-list-item routerLink="list">History</a>
+      <a mat-list-item routerLink="office">Office</a>
+      <a mat-list-item routerLink="messages">Messages</a>
+      <a mat-list-item routerLink="profile">Profile</a>
+      <a mat-list-item routerLink="help">Help</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar color="primary" id="topnav">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
-        *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span>Angular PWA</span>
+    <mat-toolbar color="primary" id="topnav" class="d-flex">
+      <div>
+        <button
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          (click)="drawer.toggle()"
+          *ngIf="isHandset$ | async">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+      </div>
+      <h1 class="w-100 app-title">Angular PWA</h1>
+      <div class="flex-shrink-1">
+        <button class="mat-icon-button"></button>
+      </div>
     </mat-toolbar>
     <ng-content></ng-content>
     <!-- Add Content Here -->

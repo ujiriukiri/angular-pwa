@@ -22,6 +22,10 @@ body{
   height: 100%;
 }
 
+.mat-list-item{
+  border-bottom: 1px solid #ddd;
+}
+
 .mat-sidenav-content{
   padding-top: 56px;
   height: calc(100% - 56px);
@@ -43,6 +47,26 @@ body{
 .example-header-image {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
+}
+
+.mat-card{
+  padding: 14px !important;
+}
+
+.mat-card-subtitle {
+    margin-bottom: 15px;
+}
+
+.mat-card-title {
+    margin-bottom: 5px !important;
+}
+
+.mat-card-header-text{
+  width: 100%;
+}
+
+.mat-tab-label{
+  flex: 1 1 auto!important;
 }
 
 @media (min-width: 700px){

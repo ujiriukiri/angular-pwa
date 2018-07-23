@@ -8,11 +8,30 @@ import { AppComponent } from './app.component';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatCardModule, MatButtonModule, MatIconModule, MatSnackBarModule,
-          MatProgressSpinnerModule, MatChipsModule, MatBadgeModule, MatListModule,
-          MatExpansionModule, MatCheckboxModule, MatDatepickerModule, MatFormFieldModule,
-          MatInputModule, MatRadioModule, MatSelectModule, MatSliderModule,
-  MatSlideToggleModule, MatToolbarModule, MatSidenavModule, MatGridListModule, MatMenuModule } from '@angular/material';
+import {
+  MatCardModule,
+  MatButtonModule,
+  MatIconModule,
+  MatSnackBarModule,
+  MatProgressSpinnerModule,
+  MatChipsModule,
+  MatBadgeModule,
+  MatListModule,
+  MatExpansionModule,
+  MatCheckboxModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatInputModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatToolbarModule,
+  MatSidenavModule,
+  MatGridListModule,
+  MatMenuModule,
+  MatTabsModule
+} from '@angular/material';
 
 import 'hammerjs';
 import { LayoutModule } from '@angular/cdk/layout';
@@ -49,7 +68,10 @@ import { environment } from '../environments/environment';
     LayoutModule,
     MatGridListModule,
     MatMenuModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
+    MatTabsModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {
+      enabled: environment.production
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
