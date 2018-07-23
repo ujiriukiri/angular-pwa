@@ -2,9 +2,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AppRoutingModule, routingComponents } from './app-routing/app-routing.module';
+
 import { AppComponent } from './app.component';
-import { TopnavComponent } from './component/topnav/topnav.component';
-import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,19 +15,13 @@ import { MatCardModule, MatButtonModule, MatIconModule, MatSnackBarModule,
   MatSlideToggleModule, MatToolbarModule, MatSidenavModule, MatGridListModule, MatMenuModule } from '@angular/material';
 
 import 'hammerjs';
-import { MainNavComponent } from './component/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
-import { TestDashboardComponent } from './component/test-dashboard/test-dashboard.component';
-
-const routes: Routes = [
-  { path: '', pathMatch: 'full', redirectTo: 'dashboard' },
-  { path: 'dashboard', component: TestDashboardComponent }
-];
 
 @NgModule({
-  declarations: [AppComponent, TopnavComponent, SidebarComponent, MainNavComponent, TestDashboardComponent],
+  declarations: [AppComponent, routingComponents],
   imports: [
-    RouterModule.forRoot(routes),
+    // RouterModule.forRoot(routes),
+    AppRoutingModule,
     BrowserModule,
     BrowserAnimationsModule,
 
@@ -48,7 +42,11 @@ const routes: Routes = [
     MatInputModule,
     MatFormFieldModule,
     MatDatepickerModule,
-    MatCheckboxModule, MatSidenavModule, LayoutModule, MatGridListModule, MatMenuModule
+    MatCheckboxModule,
+    MatSidenavModule,
+    LayoutModule,
+    MatGridListModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
