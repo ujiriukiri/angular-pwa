@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AppRoutingModule, routingComponents } from './app-routing/app-routing.module';
+import { AppRoutingModule, routingComponents } from './module/app-routing.module';
 
 import { AppComponent } from './app.component';
 
@@ -18,10 +18,9 @@ import 'hammerjs';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
-import { DashboardComponent } from './component/dashboard/dashboard.component';
 
 @NgModule({
-  declarations: [AppComponent, routingComponents, DashboardComponent],
+  declarations: [AppComponent, routingComponents],
   imports: [
     // RouterModule.forRoot(routes),
     AppRoutingModule,
