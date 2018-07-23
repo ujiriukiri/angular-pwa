@@ -16,6 +16,8 @@ import { MatCardModule, MatButtonModule, MatIconModule, MatSnackBarModule,
 
 import 'hammerjs';
 import { LayoutModule } from '@angular/cdk/layout';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent, routingComponents],
@@ -46,7 +48,8 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatSidenavModule,
     LayoutModule,
     MatGridListModule,
-    MatMenuModule
+    MatMenuModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

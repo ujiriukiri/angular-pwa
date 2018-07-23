@@ -35,6 +35,15 @@ body{
   opacity: 0 !important;
 }
 
+.example-card {
+  /* max-width: 400px; */
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
 @media (min-width: 700px){
   .mat-sidenav-content{
     padding-top: 64px;
