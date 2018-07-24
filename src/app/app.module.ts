@@ -37,9 +37,11 @@ import 'hammerjs';
 import { LayoutModule } from '@angular/cdk/layout';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { MessagesComponent } from './component/messages/messages.component';
+import { ProfileComponent } from './component/profile/profile.component';
 
 @NgModule({
-  declarations: [AppComponent, routingComponents],
+  declarations: [AppComponent, routingComponents, MessagesComponent, ProfileComponent],
   imports: [
     // RouterModule.forRoot(routes),
     AppRoutingModule,
