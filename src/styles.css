@@ -26,6 +26,29 @@ body{
   z-index: 1050 !important;
 }
 
+.app-title{
+  text-align: center;
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+}
+
+.page-wrapper{
+  height: 100%;
+}
+
+.page-wrapper .container-fluid{
+  min-height: 100%;
+}
+
+#list-page .mat-card-title{
+  font-size: 1.25rem;
+}
+
+#list-page .mat-icon{
+  vertical-align: text-bottom;
+  margin-right: .5rem;
+}
+
 .mat-list-item{
   border-bottom: 1px solid #ddd;
 }
