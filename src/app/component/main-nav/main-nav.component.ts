@@ -3,6 +3,8 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+declare var $: any;
+
 @Component({
   selector: 'app-main-nav',
   templateUrl: './main-nav.component.html',
@@ -16,5 +18,9 @@ export class MainNavComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
+
+  openModal() {
+    $('#exampleModal').modal('toggle');
+  }
 
   }
