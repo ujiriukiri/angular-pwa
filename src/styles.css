@@ -18,8 +18,12 @@ body{
   flex: 1 1 auto;
 }
 
+.sidenav{
+  z-index: 1050 !important;
+}
 .sidenav-container{
   height: 100%;
+  z-index: 1050 !important;
 }
 
 .mat-list-item{
@@ -29,11 +33,53 @@ body{
 .mat-sidenav-content{
   padding-top: 56px;
   height: calc(100% - 56px);
+  z-index: 1 !important;
+}
+
+/* Order Modal */
+.order-modal{
+  margin: 0;
+  height: 100% !important;
+  color: #fff;
+}
+
+.order-modal .modal-dialog{
+  margin: 0;
+  height: 100% !important;
+}
+
+.order-modal .modal-content{
+  height: 100% !important;
+  background-color: #000000eb;
+}
+
+.order-modal .modal-title{
+  font-weight: 400;
+}
+
+.location-item{
+  margin-top: 1rem;
+}
+
+.location-item .time{
+  display: block;
+  margin-top: .5rem;
+}
+
+.location-item .address{
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.location-item .comment{
+  display: block;
+  font-size: .9rem;
+  color: #666;
 }
 
 #topnav{
   position: fixed;
-  z-index: 1000;
+  z-index: 1000 !important;
 }
 
 .mat-icon-button.cdk-program-focused  .mat-button-focus-overlay{
