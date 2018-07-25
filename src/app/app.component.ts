@@ -13,8 +13,16 @@ export class AppComponent implements OnInit {
 
   list: any = [];
 
+  app: any;
+
   ngOnInit(): void {
     this.list = this.dataservice.getList();
-    console.log(this.list);
+    // console.log(this.list);
+  }
+
+  receiveInfo($event) {
+    console.log($event);
+    this.app = $event;
+    console.log(this.app);
   }
 }

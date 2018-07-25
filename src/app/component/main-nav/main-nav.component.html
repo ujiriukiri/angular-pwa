@@ -6,7 +6,7 @@
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
     [mode]="(isHandset$ | async) ? 'over' : 'side'"
     [opened]="!(isHandset$ | async)">
-    <mat-toolbar color="primary">Dispatch App
+    <mat-toolbar color="primary">{{ app_info.title }}
       <span class="spacer"></span>
       <button
         type="button"

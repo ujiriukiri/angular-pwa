@@ -1,5 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { DataService } from '../../service/data.service';
+import { AppService } from '../../service/app.service';
 
 @Component({
   selector: 'app-list',
@@ -15,12 +16,18 @@ export class ListComponent implements OnInit {
 
   @Output() appInfoEvent = new EventEmitter<any>();
   app: any = {};
+  app_info: any;
 
   constructor(
     private data: DataService,
+    private appservice: AppService
   ) { }
 
   ngOnInit() {
+    this.appservice.currentAppInfo.subscribe(app_info => (this.app_info = app_info));
+    this.app = {
+      title: 'Dispatch'
+    };
     this.orders = this.data.getList();
     this.by_priority = this.orders.map((item) => {
       if (item.status === 1) {
@@ -36,12 +43,20 @@ export class ListComponent implements OnInit {
   }
 
   changeAppInfo() {
-    console.log(this.app);
-    this.app = {
-      title: 'Dispatch App'
+    // console.log(this.app);
+    this.app_info = {
+      title: 'Dispatch App',
+      user: {
+        name: 'Mike Smith'
+      }
     };
-    console.log(this.app);
-    this.appInfoEvent.emit(this.app);
+    console.log(this.app_info);
+    this.appservice.updateAppInfo(this.app_info);
+    // this.app = {
+    //   title: 'Dispatch App'
+    // };
+    // console.log(this.app);
+    // this.appInfoEvent.emit(this.app);
   }
 
 }

@@ -2,6 +2,7 @@ import { Component, Input, OnChanges, SimpleChanges, OnInit } from '@angular/cor
 import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { AppService } from '../../service/app.service';
 
 declare var $: any;
 
@@ -15,9 +16,14 @@ export class MainNavComponent implements OnInit, OnChanges {
     .observe(Breakpoints.Handset)
     .pipe(map(result => result.matches));
 
-  @Input() app_info: any;
-  constructor(private breakpointObserver: BreakpointObserver) {
-    this.app_info = {
+  @Input() app: any;
+  app_info: any;
+
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private appservice: AppService
+  ) {
+    this.app = {
       title: 'Dispatch',
       user: {}
     };
@@ -28,16 +34,17 @@ export class MainNavComponent implements OnInit, OnChanges {
   }
 
   ngOnInit() {
-    console.log(this.app_info);
-    this.app_info = {
-      title: 'Dispatch App'
+    console.log(this.app);
+    this.appservice.currentAppInfo.subscribe(app_info => this.app_info = app_info);
+    this.app = {
+      title: 'Dispatch'
     };
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes['app_info']) {
-      // this.handleSetUp(this.app_info);
-      console.log(this.app_info);
+    if (changes['app']) {
+      // this.handleSetUp(this.app);
+      console.log(this.app);
     }
   }
 }
