@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'history', component: HistoryComponent },
   { path: 'verification', component: VerificationComponent },
   { path: 'signup', component: SignupComponent },
-  { path: 'order/:id', component: OrderDetailComponent }
+  { path: 'orders/:id', component: OrderDetailComponent }
 ];
 
 @NgModule({
