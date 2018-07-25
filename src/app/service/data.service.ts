@@ -14,7 +14,7 @@ export class DataService {
         order_id: 12345,
         item_name: 'Nike Flip Flop',
         contact_name: 'Tony Stark',
-        due_time: '6:30 PM',
+        due_time: '06:30 PM',
         status: 1,
         stops: [
           {
@@ -27,12 +27,12 @@ export class DataService {
           {
             name: 'Tony Stark',
             comment: 'I\'ll be home in 5 mins, please wait for me',
-            time: '5:32 PM'
+            time: '05:32 PM'
           },
           {
             name: 'John Doe',
             comment: 'No problem!',
-            time: '5:36 PM'
+            time: '05:36 PM'
           },
         ],
       },
@@ -41,7 +41,7 @@ export class DataService {
         order_id: 17819,
         item_name: 'Bucket Chicken',
         contact_name: 'Peter Parker',
-        due_time: '6:50 PM',
+        due_time: '06:50 PM',
         status: 1,
         stops: [
           {
@@ -59,7 +59,7 @@ export class DataService {
           {
             name: 'Peter Parker',
             comment: 'Need \'em chicken to bulk up',
-            time: '6:45 PM'
+            time: '06:45 PM'
           }
         ],
       },
@@ -68,8 +68,8 @@ export class DataService {
         order_id: 72187,
         item_name: '3 Tier wedding cake',
         contact_name: 'Wonder Woman',
-        due_time: '8:00 AM',
-        status: 1,
+        due_time: '08:00 AM',
+        status: 3,
         stops: [
           {
             address: 'Eight PM Junction',
@@ -81,12 +81,12 @@ export class DataService {
           {
             name: 'John Doe',
             comment: 'I\'ll arrive 10mins after due time. Traffic Issues!',
-            time: '7:47 AM'
+            time: '07:47 AM'
           },
           {
             name: 'Wonder Woman',
             comment: 'Ok, Just make it o time for the wedding!',
-            time: '5:36 PM'
+            time: '05:36 PM'
           },
         ],
       },
@@ -111,8 +111,8 @@ export class DataService {
         order_id: 52923,
         item_name: 'New Face Mask',
         contact_name: 'Dead Pool',
-        due_time: '9:00 AM',
-        status: 3,
+        due_time: '09:00 AM',
+        status: 2,
         stops: [
           {
             address: 'Alomo Bitters Close',
@@ -124,16 +124,44 @@ export class DataService {
           {
             name: 'Dead Pool',
             comment: 'i\'m ugly af, I need a face lift',
-            time: '8:14 AM'
+            time: '08:14 AM'
           },
           {
             name: 'John Doe',
             comment: 'You need a new life',
-            time: '8:15 AM'
+            time: '08:15 AM'
           },
         ],
       },
     ];
     return data;
+  }
+
+  getAppInfo() {
+    const info = {
+      title: 'Dispatch App',
+      user: {
+        name: 'John Doe',
+        user_id: 12,
+      }
+    };
+
+    return info;
+  }
+
+  getOrder(id) {
+    let order;
+    this.getList().map((item) => {
+      // console.log(id, item);
+      if (item.order_id === id) {
+        order = item;
+      }
+    });
+
+    if (order) {
+      return order;
+    } else {
+      return false;
+    }
   }
 }
